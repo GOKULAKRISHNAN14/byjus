@@ -1,0 +1,4573 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-family: 'roboto',sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+    width: 100%;
+}
+header{
+	background: #813588;
+    height: 90px;
+    width:100%;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    transition: top 0.1s ease-in-out;
+    z-index: 1030;
+}
+.top-navbar {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 10px;
+  -moz-transition: top 0.1s ease-in-out;
+  -webkit-transition: top 0.1s ease-in-out;
+  transition: top 0.1s ease-in-out
+}
+
+.top-navbar.animate {
+  top: 0;
+  background-color: #813588;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1)
+}
+
+.top-navbar li>a {
+  color: #ffc846;
+  font-size: 15px
+}
+
+.top-navbar li>a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.top-navbar li {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.top-navbar li:last-child,
+.top-navbar li.no-separator {
+  border-right: 0;
+}
+
+.top-navbar-right {
+  padding-top: 18px;
+}
+
+.top-navbar li.regi-btn {
+  border-right: 0;
+  margin-top: -12px;
+}
+
+.top-navbar li.regi-btn>a {
+  background-color: #fff;
+  display: inline-block;
+  height: 44px;
+  color: #5e93ff;
+  border-radius: 32px;
+  padding-top: 0.8rem;
+}
+
+.top-navbar li.regi-btn>a span {
+  background-image: linear-gradient(to right, #9752ff, #240750);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 992px) {
+.top-navbar li.dropdown:hover>.dropdown-menu,
+.top-navbar li.dropdown:focus>.dropdown-menu {
+  display: block;
+}
+
+.top-navbar li.dropdown:hover>a,
+.top-navbar li.dropdown:focus>a {
+  color: #fff;
+}
+.big-menu .dropdown-menu .sub:hover>ul {
+  display: block;
+}
+.big-menu .sub:hover>a,
+.big-menu .sub:focus>a {
+  color: #fff;
+}
+}
+@media (max-width: 991.98px){
+  .top-navbar .menu-open .dropdown-menu{
+      display: block;
+  }
+  .dropdown-menu .sub.menu-open-sub > ul{
+      display: block; 
+  }
+  .big-menu .sub:hover>a,
+  .big-menu .sub:focus>a{
+   color:#ffc846;
+  }
+  .big-menu .menu-open-sub:hover>a,
+  .big-menu .menu-open-sub:focus>a{
+   color:#fff;
+  }
+  .top-navbar li>a:hover, .top-navbar li>a:focus{
+  color:#ffc846;  
+  }
+  .top-navbar li.menu-open>a:hover, .top-navbar li.menu-open>a:focus{
+  color:#fff; 
+  }
+  .top-navbar li.menu-open>a{
+      color:#fff
+  }
+  }
+.top-navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding-top: 10px;
+  min-width: 182px;
+  left: 15px;
+}
+
+.top-navbar .dropdown-menu>ul {
+  padding-left: 0;
+  padding: 10px 40px 10px 26px;
+  background-color: #73207a;
+  border-radius: 0px 24px 24px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.top-navbar .dropdown-menu>ul>li {
+  list-style-type: none;
+  border-right: 0;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.top-navbar .dropdown-menu>ul>li>a {
+  font-size: 14px;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active),
+(-ms-accelerator:false) {
+
+  
+  .top-navbar li.regi-btn>a span {
+      background-image: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top-navbar {
+      top: 23px;
+      margin-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .top-navbar .dropdown-menu:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      border: 10px solid #73207a;
+      margin-left: -10px;
+      border-top: 0;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      margin-top: -10px;
+  }
+
+  .top-navbar .dropdown-menu>ul {
+      border-radius: 14px;
+      padding: 10px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .top-navbar-right {
+      padding-top: 7px;
+  }
+
+  .top-navbar li>a {
+      font-size: 13px;
+  }
+
+  .navbar-nav>li>a {
+      padding-left: 8px;
+      padding-right: 8px;
+  }
+
+  .top-navbar li.regi-btn {
+      margin-right: 0px;
+      margin-top: -8px;
+  }
+
+  .top-navbar li.regi-btn>a {
+      background-color: #fff;
+      display: inline-block;
+      width: auto;
+      height: 34px;
+      color: #5e93ff;
+      border-radius: 32px;
+      padding: 6px 15px;
+      font-size: 12px;
+  }
+
+  .top-navbar .navbar-brand img {
+      width: 85px;
+      margin-top: 6px;
+      height: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .top-navbar li.regi-btn {
+      margin-right: 0px;
+      margin-top: -5px;
+  }
+  
+  .top-navbar .navbar-brand img {
+      width: 150px;
+      height: auto;
+  }
+
+  .top-navbar-right {
+      padding-top: 9px;
+  }
+
+  .top-navbar li.regi-btn>a {
+      padding: 5px 15px;
+      height: 34px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top-navbar {
+      top: 0px;
+      background-color: transparent;
+  }
+
+  .top-navbar .navbar-header {
+      position: relative;
+      padding: 10px 40px 10px 40px;
+  }
+
+  .navbar-nav>li>a {
+      display: inline-block;
+  }
+
+  .top-navbar .navbar-brand {
+      display: inline-block;
+      
+      left: 0;
+      position: relative;
+  }
+
+  .top-navbar.animate .navbar-brand {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  left: 0;
+}
+  .top-navbar .navbar-brand>img {
+      display: inline-block;
+      height: 28px;
+      width: auto;
+  }
+
+  .top-navbar .navbar-toggle {
+      margin: 0px;
+      float: left;
+      top: 1px;
+      position: absolute;
+      left: -10px;
+      padding: 11px;
+      z-index: 1;
+  }
+  .top-navbar .navbar-toggle>span {
+      display: block;
+      background-image: url(https://cdn1.byjus.com/home/hamberger-menu.png);
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-size: cover;
+  }
+
+  .top-navbar-white-btn {
+     
+      color: #5e93ff;
+      font-size: 12px;
+      height: 28px;
+      border-radius: 16px;
+      background-color: #fff;
+      line-height: 1;
+      padding: 8px 10px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      display: block;
+  }
+
+  .top-navbar-white-btn span {
+      background-image: linear-gradient(to right, #9752ff, #240750);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  
+  .top-navbar-collapse {
+      z-index: 1025;
+      max-height: none !important;
+      position: fixed;
+      -moz-transition: left 0.2s ease-in-out;
+      -webkit-transition: left 0.2s ease-in-out;
+      transition: left 0.2s ease-in-out;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(129, 53, 136, 0.98);
+      padding: 0;
+  }
+
+  .top-navbar-right {
+      padding-right: 30px;
+      padding-left: 30px;
+      text-align: center;
+      padding-top: 0;
+      margin: 0;
+      padding-top: 0;
+      margin: 0;
+      
+      top: 55px;
+      position: relative;
+      overflow-y: auto;
+      height: 100%;
+  }
+
+  .top-navbar-right>li>a {
+      font-size: 17px;
+  }
+
+  .top-navbar-right>li {
+      margin-bottom: 15px;
+      border-right: 0;
+  }
+
+  .top-navbar-right>li:last-child {
+      margin-bottom: 0px;
+  }
+
+  .top-navbar-collapse-close {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      line-height: 0;
+      padding: 10px;
+      opacity: 0.6;
+  }
+
+  .top-navbar-collapse-icon {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      border-radius: 4px;
+      overflow: hidden;
+      background-image: url(https://cdn1.byjus.com/home/byjus-mini.jpg);
+      width: 27px;
+      height: 27px;
+      background-position: center;
+      background-size: cover;
+  }
+
+  .top-navbar-collapse.animate {
+      left: 0;
+  }
+
+  .top-navbar .dropdown-menu {
+      top: 100%;
+      padding-top: 10px;
+      position: static;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0;
+}
+
+.big-menu .dropdown-menu {
+  white-space: nowrap;
+}
+
+.big-menu .dropdown-menu>ul {
+  padding-left: 20px;
+}
+
+.big-menu .sub {
+  position: relative;
+  padding-left: 15px;
+}
+.big-menu .sub:before {
+  display: block;
+  content: '';
+  width: 9px;
+  height: 6px;
+  background-image: url(https://cdn1.byjus.com/home/caret.svg);
+  position: absolute;
+  left: 0;
+  top: 16px;
+  margin-top: -3px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+.big-menu .sub>ul {
+  min-width: 225px;
+  padding-left: 10px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  padding: 10px 40px 10px 26px;
+  background-color: #73207a;
+  border-radius: 0px 24px 24px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.big-menu .sub li {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  border-right: 0;
+  list-style-type: none;
+  padding-right: 0px;
+}
+
+.big-menu .sub a {
+  display: block;
+}
+.big-menu .dropdown-menu .sub:hover {
+  padding-right: 0;
+  transform: none;
+}
+
+
+
+
+@media (min-width: 1400px) and (max-width: 1539.98px) {
+  .big-menu .sub>ul {
+      left: 30%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .big-menu .sub>ul {
+      left: 30px;
+  }
+
+  .big-menu .sub li a {
+      max-width: 320px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .big-menu .sub>ul {
+      left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .big-menu .sub>ul {
+      left: 15px;
+      padding-right: 20px;
+      top: 100%;
+  }
+
+  .big-menu .sub li a {
+      max-width: 280px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .big-menu .dropdown-menu {
+      white-space: normal;
+  }
+
+  .big-menu .sub:before {
+      display: inline-block;
+      position: static;
+  }
+
+  .big-menu .sub a {
+      display: inline-block;
+  }
+
+  .big-menu .sub {
+      padding-left: 0;
+  }
+
+  .big-menu .sub>ul {
+      min-width: auto;
+      position: static;
+      padding: 6px 0px;
+      border-radius: 14px;
+  }
+
+  .big-menu .sub li {
+      padding: 10px 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .big-menu .sub a {
+      font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .big-menu .sub a {
+      display: inline-block;
+  }
+}
+.bj-banner {
+  height: 100%;
+  position: relative;
+  background-color: #f5f2f5;
+}
+
+.bj-banner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(https://cdn1.byjus.com/byjusweb/img/home/svg/banner_wave_mob.svg) no-repeat;
+  background-size: 100%;
+  background-position: left bottom;
+  left: -1px;
+  bottom: -104px;
+  width: calc(100% + 5px);
+  height: inherit;
+  z-index: 1009;
+}
+
+.bj-banner .bj-banner-bg {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1000;
+  display: none;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.bj-banner .bj-srk {
+  position: absolute;
+  width: 800px;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 1008;
+  display: none;
+}
+
+.bj-banner .bj-banner-wave {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  left: 0;
+  bottom: 0;
+  z-index: 1020;
+}
+
+.bj-banner .bj-banner-content {
+  position: relative;
+  padding-top: 50px;
+  width: 100%;
+  z-index: 1012;
+}
+.bj-banner .bj-banner-content-left-col {
+   display: none;
+}
+
+.bj-form {
+  background-color: #f5f2f5;
+  color: #333;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+  .bj-form {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bj-form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.bj-form .bj-btn {
+  margin: 10px 0;
+  text-transform: uppercase;
+  min-height: 40px;
+}
+
+.bj-form .header {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  letter-spacing: -0.1px;
+}
+
+.bj-form .sub-header {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1rem;
+  letter-spacing: -0.1px;
+  text-align: center;
+  display: block;
+  color: #666;
+}
+
+.bj-form .bj-promo-txt {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  color: #641d6b;
+}
+
+.bj-form .form-section {
+  margin-top: 1rem;
+}
+
+.bj-form .form-section .form-row .col {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bj-form .form-section .form-row .grade-field {
+  margin-bottom: 1rem;
+}
+
+.bj-form .form-section .form-row .col.no-margin {
+  margin: 0;
+}
+
+.bj-form .form-section .form-row .bj-icon {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  z-index: 1030;
+  width: 1rem;
+  vertical-align: middle;
+}
+
+.bj-form .form-section .form-row .bj-icon.mobile {
+  width: 1.2rem;
+  left: 10px;
+}
+
+.bj-form .form-section .form-row .form-select-dd:invalid {
+  color: #b18eb5;
+}
+
+.bj-form .form-section .form-row .form-control {
+  border: 0.8px solid #b18eb5;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 40px;
+  position: relative;
+  padding-left: 40px;
+  transition: all 0.3s linear 0s;
+}
+
+.bj-form .form-section .form-row .form-control:focus {
+  border: 0.8px solid rgba(100, 29, 107, 0.8) !important;
+  box-shadow: 0 4px 6px 0 rgba(100, 29, 107, 0.2) !important;
+}
+
+.bj-form .form-section .form-row .form-control[type=checkbox] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  display: inline-block;
+  top: 5px;
+  width: 1.5rem;
+  height: 1rem;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.bj-form .form-section .form-row .form-control[type=checkbox]+span {
+  display: inline-block;
+}
+
+.bj-form .label-whatsappUpdates,
+.checkbox-whatsapp-update {
+  cursor: pointer;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.bj-form .bj-whatsapp-updates {
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+  color: #7b5b7e;
+}
+
+.bj-form ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(100, 29, 107, 0.5);
+  opacity: 1;
+  /* Firefox */
+}
+
+.bj-form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(100, 29, 107, 0.5);
+}
+
+.bj-form ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(100, 29, 107, 0.5);
+}
+
+.bj-form .form-footer {
+  text-align: center;
+}
+
+.bj-form .form-footer .bj-know-more {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 13px;
+  color: #5b70ff;
+  display: inline-block;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.bj-form .form-footer .bj-agree-policy {
+  font-family: Roboto;
+  font-weight: 300;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 10px;
+}
+
+.bj-form .form-footer .bj-agree-policy .bj-spl-txt {
+  font-family: Roboto;
+  font-weight: 300;
+  color: #363636;
+}
+
+.bj-form .bj-otp-container {
+  display: none;
+  transition: display 0.3s linear 0s;
+  text-align: left;
+}
+
+.bj-form .bj-otp-container .bj-otp-msg {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 12px;
+  color: #3aaa1e;
+  display: block;
+  margin: 5px 0 0 5px;
+  visibility: hidden;
+  min-height: 18px;
+}
+
+.bj-form .bj-otp-container .bj-otp-msg .spl-txt {
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+.bj-form .bj-otp-container #otp {
+  display: none;
+  padding: 0.375rem 0.75rem !important;
+  width: 70px;
+}
+
+.bj-form .bj-otp-container .otp-btn {
+  min-width: 107px !important;
+}
+
+.bj-form .bj-otp-container .bj-btn {
+  min-width: fit-content;
+  padding: 10px 15px !important;
+  text-transform: initial;
+  transition: all 0.3s linear 0s;
+  background-image: linear-gradient(to right, #fc6076, #ff9231);
+  font-family: Roboto;
+  font-weight: 300;
+  width: auto;
+}
+
+.bj-form .bj-otp-container .bj-btn.voice-call {
+  padding: 5px 10px !important;
+  background-color: transparent;
+  border: 1px solid #5870ff;
+  background-image: none;
+  color: #5870ff;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.bj-form .bj-otp-container .bj-otp-sec {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-height: 70px;
+  margin-top: 10px;
+}
+
+.bj-form .bj-otp-container .bj-otp-sec .voice-call-msg {
+  flex-grow: 1;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666;
+  display: none;
+}
+
+.bj-form .bj-otp-container .bj-otp-sec>* {
+  margin-left: 15px;
+}
+
+.bj-form .bj-otp-container .bj-otp-sec>*:first-child {
+  margin: 0;
+}
+
+.bj-form .bj-otp-container.otp-sent .bj-otp-msg {
+  visibility: visible;
+}
+
+.bj-form .bj-otp-container.otp-sent #otp {
+  display: inline-block;
+}
+
+.bj-form .bj-otp-container.otp-sent .voice-call-msg {
+  display: inline-block;
+}
+
+.bj-form #mobileNumber.bj-is-valid+.feedback-icon {
+  display: block !important;
+}
+
+.help-block.with-errors {
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 12px;
+  color: #db4d4d;
+  padding-left: 5px;
+  margin: 0;
+}
+
+.has-error .form-control:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.trial-form .input-error-msg{
+position: absolute;
+}
+
+.trial-form .form-group{
+display: table;
+width: 100%;
+}
+
+.trial-form {
+  padding-top: 0.5rem;
+  color: #333;
+  text-align: center;
+}
+
+
+.trial-form-title {
+  color: #2B2B2B;
+  font-size: 1.4rem;
+  margin-top: 0;
+}
+
+.trial-form-title-sub-desc {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.trial-form-indicators {
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.trial-form-indicators ul {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.trial-form-indicators li {
+  list-style-type: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid #7DBDFD;
+  background-color: #fff;
+  color: rgba(0, 128, 255, 0.5);
+  position: relative;
+  letter-spacing: 0;
+  float: left;
+  z-index: 1;
+}
+
+.trial-form-indicators li.dash {
+  width: 1.2rem;
+  height: 0.5rem;
+  background-color: #7DBDFD;
+  display: block;
+  border-radius: 0;
+  margin-top: 0.35rem;
+  margin-right: -0.1rem;
+  margin-left: -0.1rem;
+  z-index: 0;
+}
+
+.trial-form-indicators li.active {
+  background-color: #0080FF;
+  border-color: #0080FF;
+  color: #fff;
+}
+
+.trial-form-section {
+  position: relative;
+}
+
+.trial-form-section>.input-error-msg {
+  top: 100.5%;
+}
+
+.trial-form-sub-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-top: 0;
+}
+
+.trial-form-sub-title:before,
+.trial-form-sub-title:after {
+  content: '';
+  position: absolute;
+  width: 33%;
+  height: 0.0625rem;
+  background-color: rgba(112, 112, 112, 0.1);
+  top: 50%;
+  left: 0;
+}
+
+.trial-form-sub-title:after {
+  right: 0;
+  left: auto;
+}
+
+.trial-form-sub-desc {
+  font-size: 0.75rem;
+  color: rgba(43, 43, 43, 0.6);
+  margin-top: -0.5rem;
+}
+
+.trial-form .form-group {
+  margin: 0;
+  position: relative;
+}
+
+.trial-form .form-control.input-valid {
+  border-color: green;
+}
+
+.trial-form .form-control.input-error {
+  border-color: red;
+}
+
+.trial-form .form-control~.input-error-msg {
+  bottom: 0.4rem;
+}
+
+@media (max-width: 767.98px) {
+  .trial-form .form-control {
+      margin-bottom: 1.3rem;
+  }
+
+  .trial-form .rl-phone-send-otp .form-control~.input-error-msg,
+  .trial-form .rl-otp-resend .form-control~.input-error-msg {
+      bottom: 0.4rem;
+  }
+}
+
+.trial-form .form-control {
+  border-color: #BCBCBC;
+  padding: 0.5rem 1rem;
+  height: auto;
+  min-height: 2.4rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 0;
+}
+
+.trial-form .form-control:focus {
+  box-shadow: none;
+}
+
+.trial-form .required-asterisk {
+  position: relative;
+}
+
+.trial-form .required-asterisk span {
+  display: inline-block;
+  position: absolute;
+  right: -0.3rem;
+  font-weight: 700;
+  top: -0.4rem;
+  color: #db4d4d;
+  font-size: 10px;
+}
+
+.trial-form .input-placeholder {
+  position: absolute;
+  color: rgba(112, 112, 112, 0.6);
+  z-index: 1;
+  font-size: 0.9rem;
+  line-height: 1;
+  overflow: hidden;
+  background-color: #fff;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  min-width: 3rem;
+  text-align: left;
+}
+
+.trial-form .form-control:focus~.input-placeholder,
+.trial-form .form-control:not(:focus):valid~.input-placeholder,
+.trial-form .form-control:disabled~.input-placeholder {
+  font-size: 0.75rem;
+  top: -0.375rem;
+  left: 0.5rem;
+  padding: 0rem 0.5rem;
+  line-height: 1;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+.trial-form .form-control:focus~.input-placeholder:after,
+.trial-form .form-control:focus~.input-placeholder:before,
+.trial-form .form-control:disabled~.input-placeholder:after,
+.trial-form .form-control:disabled~.input-placeholder:before,
+.trial-form .form-control:not(:focus):valid~.input-placeholder:after,
+.trial-form .form-control:not(:focus):valid~.input-placeholder:before {
+  content: '';
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+}
+
+.trial-form .form-control:focus~.input-placeholder:before,
+.trial-form .form-control:disabled~.input-placeholder:before,
+.trial-form .form-control:not(:focus):valid~.input-placeholder:before {
+  bottom: 50%;
+  top: 0;
+  background-color: #fcfcfc;
+}
+
+.trial-form .form-control:focus~.input-placeholder span,
+.trial-form .form-control:disabled~.input-placeholder span,
+.trial-form .form-control:not(:focus):valid~.input-placeholder span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.trial-form .whatsapp-updates {
+  margin-bottom: 0.4rem;
+}
+
+.trial-form .whatsapp-updates label {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.trial-form .whatsapp-updates input {
+  vertical-align: bottom;
+}
+
+.trial-form .select-input-box {
+  position: relative;
+  background-color: #fff;
+}
+
+.trial-form .select-input-box>select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.trial-form .select-input-box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 0.3rem solid #555;
+  border-bottom: 0;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  right: 0.5rem;
+  margin-top: -0.2rem;
+  top: 50%;
+}
+
+.trial-form .select-input-box .form-control {
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: 1.4rem;
+}
+
+.trial-form .select-input-box .form-control[disabled] {
+  background-color: rgba(238, 238, 238, 0.5);
+}
+
+.trial-form .select-input-box .form-control~.input-error-msg {
+  bottom: -1.15rem;
+}
+
+.trial-form .form-checkbox-control {
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+}
+
+.trial-form .ws-phone-otp .form-control {
+  padding-right: 8rem;
+}
+
+.trial-form .ws-phone-otp button {
+  color: #fff;
+  background-color: #5C72FF;
+  background-image: linear-gradient(to right, #5C72FF, #8C3FFF);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 1.5rem;
+}
+
+.trial-form .ws-phone-otp button:hover,
+.trial-form .ws-phone-otp button:focus {
+  color: #fff;
+  background-color: #5C72FF;
+  background-image: linear-gradient(to right, #5C72FF, #8C3FFF);
+}
+
+.trial-form .ws-phone-otp img {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.575rem;
+}
+
+.trial-form .book-now-btn {
+  width: 100%;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  background-color: #FF8E32;
+  background-image: linear-gradient(to right, #FF8E32, #FF5263);
+  color: #fff;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+}
+
+.trial-form input[data-mobile-input].form-control.input-valid:not(.phone-valid) {
+  border-color: #5c72ff;
+}
+
+.trial-form .otp-active-timer {
+  font-size: 0.9rem;
+}
+
+.trial-form .otp-active-timer span {
+  font-weight: 500;
+}
+
+@media (max-width: 399.98px) {
+  .trial-form .otp-mobile-number .send-otp-cta {
+      font-size: 0.8rem;
+      min-width: 6rem;
+      padding: 0.5rem;
+  }
+
+  .trial-form .otp-active-timer {
+      font-size: 0.6rem;
+  }
+}
+
+.trial-form .otp-input-field-voice-call-option {
+  position: relative;
+  text-align: left;
+}
+
+.trial-form .otp-input-field-voice-call-option .input-error-msg {
+  position: absolute;
+}
+
+.trial-form .otp-input-field {
+  width: 5rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.trial-form .otp-on-voice-call {
+  display: inline-block;
+  color: #6f6f6f;
+  font-size: 0.6rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+  vertical-align: top;
+}
+
+.trial-form .otp-on-voice-call p {
+  color: #6f6f6f;
+  margin: 0;
+}
+
+.trial-form .otp-on-voice-call svg {
+  width: 0.8rem;
+  vertical-align: middle;
+}
+
+.trial-form .otp-on-voice-call button {
+  color: #6f6f6f;
+  border: 0.06rem solid #6f6f6f;
+  padding: 0.1rem 0.3rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  font-size: 0.6rem;
+  width: 4.5rem;
+  height: 1.3rem;
+}
+
+.trial-form .otp-on-voice-call button:hover {
+  color: #020202;
+}
+
+.trial-form .otp-on-voice-call button:disabled {
+  opacity: 1;
+}
+
+.trial-form .grades {
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 0.25rem;
+  margin-right: -0.25rem;
+  justify-content: center;
+}
+
+@media (max-width: 359.98px) {
+  .trial-form .grades {
+      font-size: 0.7rem;
+  }
+}
+
+.trial-form .grades input {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  display: none;
+}
+
+.trial-form .grades input:checked+label {
+  color: #fff;
+  background-color: #0080FF;
+}
+
+.trial-form .grades>div {
+  padding: 0rem 0.25rem 0.5rem;
+  width: 16.666%;
+  height: 100%;
+}
+
+.trial-form .grades label {
+  margin: 0;
+  border: 0.0625rem solid #BCBCBC;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  color: #B2AFAF;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.trial-form .trial-item-carousel-block {
+  margin-bottom: 1.5rem;
+}
+
+.trial-form .trial-item-carousel {
+  margin: 0rem 2rem;
+}
+
+.trial-form .carousel-control {
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  bottom: 0.1rem;
+  box-shadow: 0 0.1rem 0.25rem 0 rgba(0, 0, 0, 0.3);
+  padding: 0.25rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  width: 1.5rem;
+  background-image: none;
+}
+
+.trial-form .carousel-control svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.375rem;
+  left: 50%;
+  margin-left: -0.2rem;
+}
+
+.trial-form .carousel-control.left {
+  margin-left: -2rem;
+}
+
+.trial-form .carousel-control.right {
+  margin-right: -2rem;
+  right: 0;
+  left: auto;
+}
+
+.trial-form .profiles-row {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  display: flex;
+  padding-bottom: 0.1rem;
+}
+
+.trial-form .profiles-row>div {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.trial-form .toggle-card {
+  height: 100%;
+}
+
+.trial-form .toggle-card label {
+  background-color: #fff;
+  border: 0.0625rem solid #BCBCBC;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  line-height: 1;
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  flex-flow: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: center;
+}
+
+.trial-form .toggle-card h4 {
+  color: #000;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.trial-form .toggle-card p {
+  color: #B2AFAF;
+  font-size: 0.75rem;
+  margin: 0;
+  width: 100%;
+}
+
+.trial-form .toggle-card input {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  display: none;
+}
+
+.trial-form .toggle-card input:checked+label {
+  color: #fff;
+  background-color: #0080FF;
+}
+
+.trial-form .toggle-card input:checked+label p {
+  color: inherit;
+}
+
+.trial-form .toggle-card input:checked+label h4 {
+  color: #fff;
+}
+
+.trial-form .time-slots {
+  margin-top: 1.2rem;
+}
+
+.trial-form .time-slots+.input-error-msg {
+  top: auto;
+  bottom: -0.5rem;
+}
+
+.trial-form .time-slots>ul {
+  padding: 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+  border-bottom: 0.0625rem solid rgba(112, 112, 112, 0.25);
+}
+
+.trial-form .time-slots>ul>li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 1.5rem;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.trial-form .time-slots>ul>li.active {
+  color: #0080FF;
+}
+
+.trial-form .time-slots>ul>li.active:before {
+  content: '';
+  position: absolute;
+  border: 0.3rem solid #0080FF;
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.15rem;
+}
+
+.trial-form .time-slots>ul>li.active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #0080FF;
+  bottom: -0.1rem;
+  left: 0;
+}
+
+.trial-form .time-slots>ul>li:last-child {
+  margin-right: 0;
+}
+
+.trial-form .time-slots>ul>li .badge {
+  display: inline-block;
+  background-color: #FF9100;
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 0.625rem;
+  padding: 0.15rem 0.25rem;
+  position: absolute;
+  top: -1.2rem;
+  left: 50%;
+  margin-left: -2.1rem;
+  width: 4.2rem;
+}
+
+.trial-form .time-slots>ul>li .badge img {
+  width: auto;
+  height: 0.8rem;
+  margin-right: 0.2rem;
+}
+
+.trial-form .time-slots>ul>li>a {
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+  outline: none;
+  border: none;
+}
+
+.trial-form .time-slots>ul>li.active>a,
+.trial-form .time-slots>ul>li.active>a:link,
+.trial-form .time-slots>ul>li.active>a:visited,
+.trial-form .time-slots>ul>li.active>a:active,
+.trial-form .time-slots>ul>li.active>a:hover {
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+  outline: none;
+  border: none;
+}
+
+.trial-form .time-slots .tab-pane {
+  display: none;
+}
+
+.trial-form .time-slots .tab-pane.active {
+  display: block;
+}
+
+.trial-form .slot-time-section {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  align-items: flex-start;
+}
+
+.trial-form .slot-time-section>div {
+  width: 100%;
+}
+
+.trial-form .slot-time-section .slot-card-time {
+  border-radius: 2rem;
+  background-color: #FFE1A5;
+  padding: 0.55rem 0.8rem 0.55rem 2rem;
+  font-size: 0.625rem;
+  line-height: 1;
+  position: relative;
+  width: 7rem;
+}
+
+.trial-form .slot-time-section .slot-card-time.afternoon {
+  background-color: #DEFFFC;
+}
+
+.trial-form .slot-time-section .slot-card-time.evening {
+  background-color: #DEE0FF;
+}
+
+.trial-form .slot-time-section .slot-card-time img {
+  height: 1rem;
+  margin-right: 0.1rem;
+  display: block;
+  left: 0.8rem;
+  position: absolute;
+  margin-top: -0.5rem;
+  top: 50%;
+}
+
+.trial-form .slot-time-section>div:first-child {
+  margin-right: 1rem;
+}
+
+.trial-form .slot-time-section .slot-card {
+  cursor: pointer;
+  position: relative;
+  color: #656565;
+  font-size: 0.75rem;
+  float: left;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.trial-form .slot-time-section .slot-card:last-child {
+  margin-right: 0;
+}
+
+.trial-form .slot-time-section .slot-card label {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #E8E8E8;
+  font-weight: 500;
+}
+
+.trial-form .slot-time-section .slot-card.full {
+  position: relative;
+  color: #656565;
+  cursor: default;
+}
+
+.trial-form .slot-time-section .slot-card.full:before {
+  content: 'Full';
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  background-color: #C2C2C2;
+  color: #000;
+  padding: 0.1rem 0.3rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  width: 2rem;
+  margin-left: -1rem;
+  font-size: 0.6rem;
+}
+
+.trial-form .slot-time-section .slot-card.full label {
+  background-color: rgba(232, 232, 232, 0.5);
+  color: rgba(101, 101, 101, 0.6);
+  cursor: default;
+}
+
+.trial-form .slot-time-section .slot-card input {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  display: none;
+}
+
+.trial-form .slot-time-section .slot-card input:checked+label {
+  background-color: #0080FF;
+  color: #fff;
+}
+
+@media (max-width: 349.98px) {
+  .trial-form .otp-input-field {
+      width: 4rem;
+  }
+
+  .trial-form .otp-on-voice-call {
+      font-size: 0.55rem;
+  }
+}
+
+
+@media screen and (min-width: 0\0) {
+
+  .trial-form .select-input-box:before,
+  .trial-form .select-input-box::before {
+      display: none !important;
+  }
+
+  .trial-form .select-input-box .form-control {
+      padding-right: 0.5rem;
+  }
+
+  .trial-form .slot-time-section>div {
+      width: 80%;
+  }
+}
+
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
+  .trial-form .select-input-box:before,
+  .trial-form .select-input-box::before {
+      display: none !important;
+  }
+
+  .trial-form .select-input-box .form-control {
+      padding-right: 0.5rem;
+  }
+}
+.bj-program {
+    height: auto;
+    position: relative;
+    color: white;
+    background: #fff;
+    padding-top: 30px;
+    z-index: 1001;
+}
+  
+  .bj-program .header-content {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 auto;
+    color: #333;
+  }
+  
+  .bj-program .header-content .sub-header {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    columns: #666;
+  }
+  
+  .bj-program .card {
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 100px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+  }
+  
+  .bj-program .card:first-child {
+    margin-top: 0;
+  }
+  
+  .bj-program .card .card-img-top {
+    width: auto;
+    height: 140px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -70px;
+  }
+  
+  .bj-program .card .card-img-top+.card-body {
+    margin-top: 70px;
+  }
+  
+  .bj-program .card .card-img-top.micky {
+    top: -45px;
+  }
+  
+  .bj-program .card .bj-card-byjus-logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .bj-program .card .card-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #454545;
+    width: 70%;
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bj-program .card .bj-btn {
+    margin: 10px 0 20px 0;
+  }
+  
+  .bj-program .card .card-footer {
+    border-radius: 0 0 10px 10px;
+    padding: 12px 20px;
+  }
+  
+  .bj-program .card .card-footer span {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .bj-program .bj-program-content {
+    position: relative;
+    padding-top: 60px;
+    width: 100%;
+    z-index: 1010;
+  }
+  
+  .bj-program .bj-card-content {
+    position: relative;
+    text-align: center;
+  }
+  
+  .bj-program .bj-card-list {
+    margin-top: 30px;
+  }
+  
+  .show-lg {
+    display: none;
+  }
+  
+  @media (min-width: 300px) {
+    .bj-program .bj-card-list .col-sm-12 {
+      padding: 50px 0;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .bj-program {
+      padding-top: 100px;
+    }
+  
+    .bj-program .header-content {
+      font-size: 34px;
+      line-height: 44px;
+      top: 130px;
+      width: 600px;
+    }
+  
+    .bj-program .header-content .sub-header {
+      font-size: 18px;
+      line-height: 26px;
+      padding: 0 50px;
+    }
+  
+    .bj-program .card {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+  
+    .bj-program .card .card-img-top {
+      height: 200px;
+      top: -100px;
+    }
+  
+    .bj-program .card .card-img-top+.card-body {
+      margin-top: 100px;
+    }
+  
+    .bj-program .card .card-img-top.micky {
+      top: -45px;
+    }
+  
+    .bj-program .card .bj-card-byjus-logo {
+      width: 170px;
+    }
+  
+    .bj-program .card .card-text {
+      min-height: 135px;
+    }
+  
+    .bj-program .card .card-text {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  
+    .bj-program .bj-card-list {
+      margin-top: 70px;
+    }
+  
+    .bj-program .bj-card-list .col-md-12 {
+      padding: 70px 0;
+      text-align: center;
+    }
+  
+    .bj-program .bj-program-content {
+      padding-top: 50px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .bj-program {
+      padding-top: 120px;
+    }
+  
+    .bj-program .card {
+      max-width: 300px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .bj-program {
+      padding-top: 20px;
+    }
+  
+    .bj-program .card {
+      max-width: 350px;
+    }
+  
+    .bj-program .card .card-text {
+      min-height: 100px;
+    }
+  
+    .bj-program .card .card-footer span {
+      font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .bj-program {
+      background-size: 100% 798px;
+    }
+  
+    .bj-program .header-content {
+      font-size: 33px;
+      line-height: 37px;
+      top: 130px;
+      width: 1040px;
+    }
+  
+    .bj-program .header-content .sub-header {
+      font-size: 20px;
+      line-height: 32px;
+      margin-top: 30px;
+      padding: 0 100px;
+    }
+  
+    .show-lg {
+      display: block;
+    }
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    outline: none;
+  }
+  
+  .visible-xs,
+  .visible-sm {
+    display: none;
+  }
+  
+  .bj-btn {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14px;
+    background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    outline: none;
+    min-width: 170px;
+  }
+  
+  .bj-btn:focus {
+    outline: none;
+  }
+  
+  .bj-btn .btn-arrow {
+    margin-left: 10px;
+  }
+  
+  .demo-shade {
+    background-image: linear-gradient(to right, #8c3fff, #5c72ff);
+  }
+  
+  .register-shade {
+    background-image: linear-gradient(to right, #fc6076, #ff9231);
+  }
+  
+  .explore-shade {
+    background-image: linear-gradient(to right, #0a72d1, #01b6e1);
+  }
+  
+  .review-shade {
+    background-image: linear-gradient(to right, #9752ff, #5e93ff);
+  }
+  
+  .bj-section {
+    padding: 30px 0;
+  }
+  
+  .section-header {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 26px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    outline: none;
+    border: none;
+  }
+  
+  .invalid-feedback {
+    text-align: left;
+  }
+  
+  .was-validated .form-control:valid {
+    background-image: none;
+  }
+  
+  .was-validated .form-control:invalid {
+    background-image: none;
+  }
+  
+  .feedback-icon {
+    display: none;
+    transition: display 0.3s linear 0s;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .feedback-icon img {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    top: 13px;
+    right: 10px;
+  }
+  
+  .show {
+    display: block !important;
+  }
+  
+  .visible {
+    visibility: visible;
+  }
+  
+  .form-group {
+    margin: 0;
+    position: relative;
+  }
+  
+  
+  @media (min-width: 300px) {
+    .visible-xs {
+      display: inline-block;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .visible-sm {
+      display: inline-block;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .section-header {
+      font-size: 30px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+  
+    .bj-btn {
+      font-size: 15px;
+    }
+  
+    .section-header {
+      font-size: 33px;
+    }
+  
+    .section-content {
+      margin-top: 30px;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .section-header {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 1199.98px) {
+    .navbar-fixed-top.top-navbar {
+      top: 0px;
+      background-color: #813588;
+    }
+  }
+  
+  .free-class-form .input-error-msg {
+    font-size: 11px;
+  }
+  
+  
+  .otp-mobile-number .send-otp-cta {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    min-width: 8rem;
+    border: 0.06rem solid #813588;
+    padding: 0.5rem 0.8rem;
+    background-color: #813588;
+    height: 40px;
+    font-weight: 500;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    opacity: 0.5;
+  }
+  
+  .otp-mobile-number input.input-valid~.send-otp-cta {
+    opacity: 1;
+  }
+  
+  .valid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #28a745;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  
+  .otp-input-field-voice-call-option {
+    position: relative;
+    text-align: left;
+  }
+  
+  .otp-input-field {
+    width: 5rem;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+  
+  .otp-on-voice-call {
+    display: inline-block;
+    color: #6f6f6f;
+    font-size: 0.6rem;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    vertical-align: top;
+  }
+  
+  .otp-on-voice-call p {
+    margin: 0;
+  }
+  
+  .otp-on-voice-call button {
+    color: #5870FF;
+    border: 0.06rem solid #5870FF;
+    padding: 0.1rem 0.3rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 0.6rem;
+    width: 4.5rem;
+    /* background-color: #fff; */
+  }
+  
+  .otp-on-voice-call button:hover,
+  .otp-on-voice-call button:focus {
+    color: #5870FF;
+    border: 0.06rem solid #5870FF;
+    background-color: #fff;
+    outline: 0;
+  }
+  
+  .otp-on-voice-call svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  
+  svg {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  
+  .bj-form .form-section .form-row .form-control.otp-input-field {
+    padding-left: 15px;
+  }
+  
+  .form-control.otp-verified~.feedback-icon img {
+    display: block;
+  }
+  
+  .feedback-icon img {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    top: 12px;
+    right: 10px;
+  }
+  
+  .form-control.otp-verified~.valid-feedback,
+  .form-control.otp-verified~.feedback-icon img {
+    display: block;
+  }
+  
+  /* IE10+ */
+  @media screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    .bj-banner .bj-banner-bg {
+      top: -10px;
+      height: 100%;
+    }
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  @media(max-width: 767.98px) {
+    .otp-mobile-number .send-otp-cta {
+      min-width: 6rem;
+    }
+  }
+  
+  .profile-form {
+    display: none;
+  }
+  
+  .profile-form .form-group.select-form-group:before {
+    content: "";
+    background: url(https://cdn1.byjus.com/byjusweb/img/home/svg/down_arrow.svg) no-repeat;
+    background-size: 30px 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+    display: inline-block;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+    -khtml-opacity: 0.4;
+    -moz-opacity: 0.4;
+    filter: alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  }
+  
+  .form-control option {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 1.2rem;
+  }
+  
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+  }
+  
+  .form-group.select-form-group:before {
+    content: "";
+    background: url(https://cdn1.byjus.com/byjusweb/img/home/svg/down_arrow.svg) no-repeat;
+    background-size: 30px 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: inline-block;
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+    -khtml-opacity: 0.4;
+    -moz-opacity: 0.4;
+    filter: alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  }
+  
+  .form-select-dd.form-control {
+    background-color: transparent;
+  }
+  
+  /* comprehensive learning program section  */
+  .mtop15 {
+    margin-top: 15px;
+  }
+  
+  .mtop10 {
+    margin-top: 10px;
+  }
+  
+  .mtop8 {
+    margin-top: 8px;
+  }
+  
+  .program-section {
+    height: auto;
+    position: relative;
+    color: white;
+    background: #fff;
+    padding-top: 30px;
+    z-index: 1001;
+  }
+  
+  .program-section .header-content {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 auto;
+    color: #333;
+  }
+  
+  .program-section .header-content .header {
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2c2c;
+  }
+  
+  .program-section .header-content .sub-header {
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2c2c;
+  }
+  
+  .program-section .card {
+    width: 100%;
+    background: #f2f2f2;
+    box-shadow: 0px 27px 20px -15px rgba(122, 62, 134, 0.31);
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    margin: 20px 0px;
+  }
+  
+  .program-section .early-learn-card {
+    max-width: 850px;
+  }
+  
+  .program-section .card .card-content{
+    padding: 0px;
+    text-align: center;
+  }
+  .program-section .card .card-header {
+    border-radius: 0 10px 0px 10px;
+    padding: 6px 12px;
+    min-width: 150px;
+    float: right;
+    margin: 0 15px;
+  }
+  
+  .program-section .card .card-header span {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .program-section .card .card-byjus-logo {
+      max-width: 140px;
+      height: auto;
+      text-align: left;
+      margin-left: -10px;
+  }
+  
+  .program-section .card .card-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #2c2c2d;
+    text-align: left;
+    display: flex;
+    margin: 15px 0px 15px 0px;
+  }
+  
+  .program-section .card .card-img-top {
+    height: 240px;
+    top: 100px;
+  }
+  
+  .program-section .demo-shade {
+    background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+  }
+  
+  .program-section .bj-btn {
+    font-size: 18px;
+    background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    outline: none;
+    min-width: 170px;
+    text-align: center;
+  }
+  
+  .program-section .card-body .know-more-link {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #464749;
+    margin-top: 15px;
+  }
+  
+  .program-section .jeeNeet-card {
+    height: 160px;
+    padding: 10px;
+  }
+  
+  .program-section .jeeNeet-card .card-img-top {
+    height: 125px;
+  }
+  
+  .program-section .jeeNeet-card .card-text {
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .program-section .jeeNeet-card .bj-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  .program-section .ias-card {
+    height: 160px;
+    padding: 10px;
+  }
+  
+  .program-section .ias-card .card-img-top {
+    height: 125px;
+  }
+  
+  .program-section .ias-card .card-text {
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .program-section .ias-card .bj-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  @media (min-width: 300px) and (max-width: 467px) {
+    .program-section {
+      padding-top: 115px;
+    }
+  
+    .program-section .header-content {
+      position: relative;
+      font-size: 16px;
+    }
+  
+    .program-section .header-content .header {
+      font-size: 16px;
+    }
+  
+    .program-section .header-content .sub-header {
+      font-size: 11px;
+      font-weight: 500;
+    }
+  
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      font-size: 30px;
+      text-align: center;
+    }
+    
+    .flex-item-left {
+      flex: 50%;
+      margin-right: 20px;
+    }
+    
+    .flex-item-right {
+      flex: 50%;
+    }
+  
+    .program-section .card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 10px;
+    }
+  
+    .program-section .card .card-img-top {
+      height: 175px;
+      top: 100px;
+      padding: 10px 15px;
+    }
+  
+    .program-section .card .card-byjus-logo {
+      display: block;
+      position: relative;
+      max-width: 85px;
+      margin: 0;
+      text-align: left;
+      padding-top: 5px;
+    }
+  
+    .program-section .card .card-text {
+      font-size: 13px;
+      margin: 5px 0px 10px 0px;
+    }
+  
+    .program-section .early-learn-card .card-content {
+      padding: 10px;
+    }
+  
+    .program-section .early-learn-card .card-img-top {
+      height: 150px;
+      padding: 5px;
+      max-width: 165px;
+    }
+  
+    .program-section .early-learn-card .card-byjus-logo {
+      display: block;
+      position: relative;
+      text-align: left;
+      max-width: 114px;
+      margin-left: -20px;
+    }
+  
+    .program-section .jeeNeet-card {
+      height: 270px;
+      padding: 0px;
+    }
+  
+    .program-section .jeeNeet-card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .program-section .jeeNeet-card .card-text {
+      font-size: 12px;
+      margin: 10px 0px 10px 0px;
+      text-align: center;
+    }
+  
+    .program-section .jeeNeet-card .card-img-top {
+      height: 140px;
+      padding: 10px 12px;
+    }
+  
+    .program-section .jeeNeet-card .card-byjus-logo {
+      display: block;
+      position: relative;
+      max-width: 120px;
+      margin: 0;
+      text-align: center;
+  }
+  
+  .program-section .jeeNeet-card .bj-btn{
+      margin-top: 15px;
+      font-size: 14px;
+      padding: 5px 10px;
+  }
+  
+    .program-section .ias-card {
+      height: 270px;
+      padding: 0px;
+    }
+  
+    .program-section .ias-card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .program-section .ias-card .card-text {
+      font-size: 12px;
+      margin: 10px 0px 10px 0px;
+      text-align: center;
+    }
+  
+    .program-section .ias-card .card-img-top {
+      height: 140px;
+      padding: 10px 12px;
+    }
+  
+    .program-section .ias-card .card-byjus-logo {
+      display: block;
+      position: relative;
+      max-width: 95px;
+      margin: 0;
+      text-align: center;
+  }
+  
+    
+    .program-section .demo-shade {
+      background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    }
+  
+    .program-section .bj-btn {
+      font-size: 12px;
+      background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+      border-radius: 10px;
+      padding: 8px 10px;
+      color: white;
+      border: none;
+      outline: none;
+      min-width: 110px;
+      text-align: center;
+    }
+  
+    .program-section .card-body .know-more-link {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  } 
+  
+  @media (min-width: 400px) and (max-width: 410px) {
+    .program-section .jeeNeet-card .bj-btn {
+      margin-top: 2px;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+  }
+  
+  @media (min-width: 468px) and (max-width: 767px) {
+    .program-section {
+      padding-top: 115px;
+    }
+  
+    .program-section .header-content {
+      position: relative;
+      font-size: 16px;
+    }
+  
+    .program-section .header-content .header {
+      font-size: 25px;
+    }
+  
+    .program-section .header-content .sub-header {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      font-size: 30px;
+      text-align: center;
+    }
+    
+    .flex-item-left {
+      flex: 50%;
+      margin-right: 20px;
+    }
+    
+    .flex-item-right {
+      flex: 50%;
+    }
+  
+    .program-section .card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 10px;
+    }
+  
+    .program-section .card .card-img-top {
+      height: 220px;
+      padding-left: 20px;
+    }
+  
+    .program-section .card .card-byjus-logo {
+      display: block;
+      position: relative;
+      max-width: 150px;
+      margin: 0;
+      text-align: left;
+      padding-top: 5px;
+    }
+  
+    .program-section .card .card-text {
+      font-size: 18px;
+      margin: 15px 0px 15px 0px;;
+    }
+  
+    .program-section .early-learn-card .card-content {
+      padding: 10px;
+    }
+  
+    .program-section .early-learn-card .card-img-top {
+      height: 230px;
+      max-width: 240px;
+      padding: 5px;
+    }
+  
+    .program-section .early-learn-card .card-byjus-logo {
+      display: block;
+      position: relative;
+      text-align: left;
+      max-width: 160px;
+      margin-left: -20px;
+    }
+  
+    .program-section .jeeNeet-card {
+      height: 270px;
+      padding: 0px;
+    }
+  
+    .program-section .jeeNeet-card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .program-section .jeeNeet-card .card-text {
+      font-size: 13px;
+      margin: 10px 0px 10px 0px;
+      text-align: center;
+    }
+  
+    .program-section .jeeNeet-card .card-img-top {
+      height: 140px;
+      padding: 10px 12px;
+    }
+  
+    .program-section .jeeNeet-card .card-byjus-logo {
+      display: block;
+      position: relative;
+      max-width: 160px;
+      margin: 0;
+      text-align: center;
+  }
+  
+  .program-section .jeeNeet-card .bj-btn{
+      margin-top: 22px;
+      font-size: 14px;
+      padding: 5px 10px;
+  }
+  
+    .program-section .ias-card {
+      height: 270px;
+      padding: 0px;
+    }
+  
+    .program-section .ias-card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .program-section .ias-card .card-text {
+      font-size: 14px;
+      margin: 10px 0px 10px 0px;
+      text-align: center;
+    }
+  
+    .program-section .ias-card .card-img-top {
+      height: 140px;
+      padding: 10px 12px;
+    }
+  
+    .program-section .ias-card .card-byjus-logo {
+      display: block;
+      position: relative;
+      max-width: 145px;
+      margin: 0;
+      text-align: center;
+  }
+  
+    
+    .program-section .demo-shade {
+      background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    }
+  
+    .program-section .bj-btn {
+      font-size: 18px;
+      background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+      border-radius: 10px;
+      padding: 8px 10px;
+      color: white;
+      border: none;
+      outline: none;
+      min-width: 110px;
+      text-align: center;
+    }
+  
+    .program-section .card-body .know-more-link {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .program-section {
+      padding-top: 140px;
+    }
+    
+    .program-section .header-content {
+      text-align: center;
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 auto;
+      color: #333;
+    }
+    
+    .program-section .header-content .sub-header {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      columns: #666;
+    }
+    
+    .program-section .card {
+      min-height: 305px;
+      margin-bottom: 10px;
+    }
+    
+    .program-section .card .card-content{
+      padding: 20px;
+      text-align: left;
+    }
+    .program-section .card .card-header {
+      border-radius: 0 10px 0px 10px;
+      padding: 6px 12px;
+      min-width: 150px;
+      float: right;
+      margin: 0 15px;
+    }
+    
+    .program-section .card .card-header span {
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+    }
+    
+    .program-section .card .card-byjus-logo {
+        max-width: 120px;
+        height: auto;
+        text-align: left;
+    }
+    
+    .program-section .card .card-text {
+      font-size: 15px;
+      margin: 10px 0px 10px 0px;
+    }
+    
+    .program-section .card .card-img-top {
+      width: 100%;
+      height: 200px;
+    }
+    
+    .program-section .demo-shade {
+      background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    }
+    
+    .program-section .bj-btn {
+      font-size: 13px;
+      background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+      border-radius: 10px;
+      padding: 12px 15px;
+      color: white;
+      border: none;
+      outline: none;
+      min-width: 135px;
+      text-align: center;
+    }
+    
+    .program-section .card-body .know-more-link {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  
+    .program-section .early-learn-card {
+      max-width: 745px;
+      min-height: 342px;
+    }
+  
+    .program-section .early-learn-card .card-img-top {
+      width: 100%;
+      min-width: 190px;
+      height: 220px;
+    }
+  
+    .program-section .early-learn-card .card-byjus-logo {
+      max-width: 185px;
+      margin-left: -25px;
+    }
+  
+    .program-section .early-learn-card .bj-btn{
+      margin-top: 10px;
+    }
+  
+    .program-section .jeeNeet-card {
+      min-height: 0px;
+      max-width: 287px;
+      padding: 20px 30px;
+      margin-bottom: 0;
+      margin-left: 10px;
+    }
+  
+    .program-section .jeeNeet-card .card-content{
+      padding: 0px;
+    }
+    
+    .program-section .jeeNeet-card .card-img-top {
+      height: 125px;
+    }
+    
+    .program-section .jeeNeet-card .card-text {
+      font-size: 11px;
+      width: 109px;
+      margin: 10px -10px 10px -15px;
+    }
+  
+    .program-section .jeeNeet-card .card-byjus-logo {
+      max-width: 100px;
+      height: auto;
+      text-align: left;
+      margin-left: -15px;
+    }
+    
+    .program-section .jeeNeet-card .bj-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-width: 100px;
+      text-align: center;
+      margin-left: -15px;
+    }
+    
+    .program-section .ias-card {
+      min-height: 0px;
+      max-width: 287px;
+      padding: 20px 30px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+  
+    .program-section .ias-card .card-content{
+      padding: 0px;
+    }
+    
+    .program-section .ias-card .card-img-top {
+      height: 125px;
+    }
+    
+    .program-section .ias-card .card-text {
+      font-size: 10px;
+      width: 109px;
+      margin: 10px -10px 10px -15px;
+    }
+  
+    .program-section .ias-card .card-byjus-logo {
+      max-width: 100px;
+      height: auto;
+      text-align: left;
+      margin-left: -15px;
+    }
+    
+    .program-section .ias-card .bj-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-width: 100px;
+      text-align: center;
+      margin-left: -15px;
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199px){
+    .mtop {
+      margin-top: 4px;
+    }
+  
+    .program-section {
+      height: auto;
+      position: relative;
+      color: white;
+      background: #fff;
+      padding-top: 30px;
+      z-index: 1001;
+    }
+    
+    .program-section .header-content {
+      text-align: center;
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 auto;
+      color: #333;
+    }
+  
+    .program-section .header-content .header {
+      font-size: 24px;
+  }
+    
+    .program-section .header-content .sub-header {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .program-section .card {
+      width: 100%;
+      max-height: 315px;
+      background: #f2f2f2;
+      box-shadow: 0px 27px 20px -15px rgba(122, 62, 134, 0.31);
+      margin: 0 auto;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      word-wrap: break-word;
+      background-clip: border-box;
+      margin-bottom: 30px;
+    }
+  
+    .program-section .early-learn-card {
+      max-width: 745px;
+      min-height: 350px;
+    }
+    
+    .program-section .card .card-content{
+      padding: 20px;
+      text-align: left;
+    }
+    .program-section .card .card-header {
+      border-radius: 0 10px 0px 10px;
+      padding: 6px 12px;
+      min-width: 150px;
+      float: right;
+      margin: 0 15px;
+    }
+    
+    .program-section .card .card-header span {
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+    }
+    
+    .program-section .card .card-byjus-logo {
+        max-width: 122px;
+        height: 65px;
+        text-align: left;
+    }
+    
+    .program-section .card .card-text {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 1.2;
+      color: #2c2c2d;
+      text-align: left;
+      display: flex;
+      margin: 15px 0px 15px 0px;
+    }
+    
+    .program-section .card .card-img-top {
+      width: 100%;
+      height: 240px;
+      top: 100px;
+      max-width: 340px;
+      max-height: 240px;
+    }
+    
+    .program-section .demo-shade {
+      background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    }
+    
+    .program-section .bj-btn {
+      font-size: 16px;
+      background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+      border-radius: 10px;
+      padding: 15px 30px;
+      color: white;
+      border: none;
+      outline: none;
+      min-width: 170px;
+      text-align: center;
+    }
+    
+    .program-section .card-body .know-more-link {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.21;
+      letter-spacing: normal;
+      text-align: left;
+      color: #464749;
+      margin-top: 15px;
+    }
+  
+    .program-section .jeeNeet-card {
+      max-width: 380px;
+    }
+  
+    .program-section .jeeNeet-card .card-content{
+      padding: 5px;
+    }
+    
+    .program-section .jeeNeet-card .card-img-top {
+      height: 125px;
+      width: auto;
+    }
+    
+    .program-section .jeeNeet-card .card-text {
+      font-size: 14px;
+      margin: 10px 0px 10px -15px;
+      min-width: 160px;
+    }
+  
+    .program-section .jeeNeet-card .card-byjus-logo {
+      max-width: 122px;
+      height: auto;
+      text-align: left;
+    }
+    
+    .program-section .jeeNeet-card .bj-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-width: 100px;
+      text-align: center;
+    }
+    
+    .program-section .ias-card {
+      max-width: 380px;
+    }
+  
+    .program-section .ias-card .card-content{
+      padding: 5px;
+    }
+    
+    .program-section .ias-card .card-img-top {
+      height: 125px;
+      width: auto;
+    }
+    
+    .program-section .ias-card .card-text {
+      font-size: 14px;
+      margin: 10px 0px 10px -15px;
+      min-width: 160px;
+    }
+  
+    .program-section .ias-card .card-byjus-logo {
+      max-width: 122px;
+      height: auto;
+      text-align: left;
+    }
+    
+    .program-section .ias-card .bj-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-width: 100px;
+      text-align: center;
+    }
+  }
+  
+   @media (min-width: 1200px) {
+    .mtop {
+      margin-top: 10px;
+    }
+  
+    .program-section {
+      height: auto;
+      position: relative;
+      color: white;
+      background: #fff;
+      padding-top: 30px;
+      z-index: 1001;
+    }
+    
+    .program-section .header-content {
+      text-align: center;
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 auto;
+      color: #333;
+    }
+  
+    .program-section .header-content .header {
+      font-size: 24px;
+  }
+    
+    .program-section .header-content .sub-header {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .program-section .card {
+      width: 100%;
+      max-height: 315px;
+      background: #f2f2f2;
+      box-shadow: 0px 27px 20px -15px rgba(122, 62, 134, 0.31);
+      margin: 0 auto;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      word-wrap: break-word;
+      background-clip: border-box;
+      margin-bottom: 30px;
+    }
+  
+    .program-section .early-learn-card {
+      max-width: 745px;
+      min-height: 350px;
+    }
+    
+    .program-section .card .card-content{
+      padding: 20px;
+      text-align: left;
+    }
+    .program-section .card .card-header {
+      border-radius: 0 10px 0px 10px;
+      padding: 6px 12px;
+      min-width: 150px;
+      float: right;
+      margin: 0 15px;
+    }
+    
+    .program-section .card .card-header span {
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+    }
+    
+    .program-section .card .card-byjus-logo {
+        max-width: 122px;
+        height: 65px;
+        text-align: left;
+    }
+    
+    .program-section .card .card-text {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 1.2;
+      color: #2c2c2d;
+      text-align: left;
+      display: flex;
+      margin: 5px 0px;
+    }
+    
+    .program-section .card .card-img-top {
+      width: 100%;
+      height: 240px;
+      top: 100px;
+      max-width: 340px;
+      max-height: 240px;
+    }
+    
+    .program-section .demo-shade {
+      background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    }
+    
+    .program-section .bj-btn {
+      font-size: 16px;
+      background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+      border-radius: 10px;
+      padding: 15px 30px;
+      color: white;
+      border: none;
+      outline: none;
+      min-width: 170px;
+      text-align: center;
+    }
+    
+    .program-section .card-body .know-more-link {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.21;
+      letter-spacing: normal;
+      text-align: left;
+      color: #464749;
+      margin-top: 15px;
+    }
+  
+    .program-section .jeeNeet-card {
+      max-width: 460px;
+    }
+  
+    .program-section .jeeNeet-card .card-content{
+      padding: 5px;
+    }
+    
+    .program-section .jeeNeet-card .card-img-top {
+      height: 125px;
+      width: auto;
+    }
+    
+    .program-section .jeeNeet-card .card-text {
+      font-size: 14px;
+      margin: 10px 0px 10px -15px;
+      min-width: 160px;
+    }
+  
+    .program-section .jeeNeet-card .card-byjus-logo {
+      max-width: 122px;
+      height: auto;
+      text-align: left;
+    }
+    
+    .program-section .jeeNeet-card .bj-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-width: 100px;
+      text-align: center;
+    }
+    
+    .program-section .ias-card {
+      max-width: 460px;
+    }
+  
+    .program-section .ias-card .card-content{
+      padding: 5px;
+    }
+    
+    .program-section .ias-card .card-img-top {
+      height: 125px;
+      width: auto;
+    }
+    
+    .program-section .ias-card .card-text {
+      font-size: 14px;
+      margin: 10px 0px 10px -15px;
+      min-width: 160px;
+    }
+  
+    .program-section .ias-card .card-byjus-logo {
+      max-width: 122px;
+      height: auto;
+      text-align: left;
+    }
+    
+    .program-section .ias-card .bj-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-width: 100px;
+      text-align: center;
+    }
+  } 
+  
+  @media (min-width: 1400px) {
+    .mtop {
+      margin-top: 10px;
+    }
+  
+    .program-section {
+      position: relative;
+    }
+    
+    .program-section .header-content {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 auto;
+      color: #333;
+    }
+    
+    .program-section .header-content .sub-header {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      columns: #666;
+    }
+    
+    .program-section .card {
+      width: 100%;
+      max-height: 330px;
+      background: #f2f2f2;  
+      box-shadow: 0px 27px 20px -15px rgba(122, 62, 134, 0.31);
+      margin: 0 auto;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      word-wrap: break-word;
+      background-clip: border-box;
+      margin-bottom: 30px;
+    }
+    
+    
+    .program-section .card .card-content{
+      padding: 0px;
+      text-align: left;
+    }
+    .program-section .card .card-header {
+      border-radius: 0 10px 0px 10px;
+      padding: 4px 30px;
+      min-width: 180px;
+      float: right;
+      margin: 0 15px;
+    }
+    
+    .program-section .card .card-header span {
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+    }
+    
+    .program-section .card .card-byjus-logo {
+      max-width: 130px;
+      height: 65px;
+      text-align: left;
+    }
+    
+    .program-section .card .card-text {
+      font-family: Roboto;
+      font-size: 23px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2c2c2d;
+      margin: 10px 0px 10px 0px;
+    }
+  
+    .program-section .card .card-img-top {
+      margin-top: 15px;
+      min-width: 270px;
+      height: 273px;
+      padding: 0px 20px;
+    }
+  
+    .program-section .early-learn-card {
+      min-width: 680px;
+      min-height: 360px;
+    }
+  
+    .program-section .early-learn-card .card-img-top {
+      min-width: 360px;
+      min-height: 260px;
+      padding-top: 20px;
+      height: auto;
+    }
+  
+    .program-section .early-learn-card .card-byjus-logo {
+      max-width: 190px;
+      height: 115px;
+      text-align: left;
+      margin-left: -30px;
+    }
+    
+    .program-section .demo-shade {
+      background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    }
+    
+    .program-section .bj-btn {
+      font-size: 15px;
+      background-image: linear-gradient(to right, #ff9234, #fc6274 100%);
+      border-radius: 10px;
+      padding: 15px 30px;
+      color: white;
+      border: none;
+      outline: none;
+      min-width: 170px;
+      text-align: center;
+    }
+    
+    .program-section .card-body .know-more-link {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.21;
+      letter-spacing: normal;
+      text-align: left;
+      color: #464749;
+      margin-top: 10px;
+    }
+  
+    .program-section .jeeNeet-card {
+      min-width: 432px;
+      max-width: 425px;
+      height: 170px;
+      margin-left: 40px;
+      margin-bottom: 20px;
+    }
+  
+    .program-section .jeeNeet-card .card-content{
+      padding: 0px;
+    }
+    
+    .program-section .jeeNeet-card .card-img-top {
+      height: 145px;
+      min-width: 122px;
+      padding: 0px 10px 10px 0px;
+      margin-left: -25px;
+    }
+  
+    .program-section .jeeNeet-card .card-byjus-logo {
+      max-width: 165px;
+      height: auto;
+      margin-left: 0;
+      text-align: left;
+    }
+    
+    .program-section .jeeNeet-card .card-body {
+      margin-left: -40px;
+    }
+  
+    .program-section .jeeNeet-card .card-text {
+      font-size: 16px;
+      width: 140px;
+    }
+    
+    .program-section .jeeNeet-card .bj-btn {
+      font-size: 15px;
+      padding: 7px 10px;
+      min-width: 100px;
+      text-align: center;
+      margin-left: 0;
+    }
+    
+    .program-section .ias-card {
+      min-width: 432px;
+      max-width: 425px;
+      height: 170px;
+      margin-left: 40px;
+    }
+  
+    .program-section .ias-card .card-content{
+      padding: 0px;
+    }
+    
+    .program-section .ias-card .card-img-top {
+      height: 145px;
+      min-width: 122px;
+      padding: 0px 10px 10px 0px;
+      margin-left: -25px;
+    }
+  
+    .program-section .ias-card .card-body {
+      margin-left: -40px;
+    }
+  
+    .program-section .ias-card .card-byjus-logo {
+      max-width: 130px;
+      height: auto;
+      margin-left: 0;
+      text-align: left;
+    }
+    
+    .program-section .ias-card .card-text {
+      font-size: 16px;
+      width: 220px;
+    }
+    
+    .program-section .ias-card .bj-btn {
+      font-size: 15px;
+      padding: 7px 10px;
+      min-width: 100px;
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .program-section {
+      background-size: 100% 798px;
+    }
+  
+    .program-section .header-content {
+      font-size: 33px;
+      line-height: 37px;
+      top: 130px;
+      width: 1040px;
+    }
+  
+    .program-section .header-content .header{
+      font-size: 35px;
+      line-height: 37px;
+      margin-bottom: 15px;
+      top: 130px;
+      width: 1040px;
+    }
+  
+    .program-section .header-content .sub-header {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 30px;
+      padding: 0 100px;
+    }
+  
+    
+    .program-section .jeeNeet-card {
+      max-width: 365px;
+      min-height: 0px;
+      width: 100%;
+      height: 170px;
+      padding: 15px 50px;
+      margin-bottom: 20px;
+    }
+  
+    .program-section .ias-card {
+      max-width: 365px;
+      min-height: 0px;
+      width: 100%;
+      height: 170px;
+      padding: 15px 50px;
+      margin-bottom: 20px;
+    }
+  
+    .show-lg {
+      display: block;
+    }
+  }
+  .bj-advantages .bj-adv-list .bj-adv-item {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .bj-advantages .bj-adv-list .bj-adv-item img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .bj-advantages .bj-adv-list .bj-adv-item p {
+    font-size: 20px;
+    line-height: 22px;
+    color: #333333;
+    margin: 0 auto;
+    margin-top: 15px;
+    max-width: 250px;
+  }
+  
+  @media (min-width: 768px) {
+    .bj-advantages .bj-adv-list .bj-adv-item p {
+      max-width: none;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .bj-advantages {
+      padding-top: 30px !important;
+    }
+  
+    .bj-advantages .bj-adv-list .bj-adv-item img {
+      width: 250px;
+    }
+  
+    .bj-advantages .bj-adv-list .bj-adv-item p {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .bj-advantages .bj-adv-list .bj-adv-item img {
+      width: 300px;
+    }
+  
+    .bj-advantages .bj-adv-list .bj-adv-item p {
+      font-size: 26px;
+      line-height: 32px;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .bj-advantages .bj-adv-list .bj-adv-item img {
+      width: 350px;
+    }
+  }
+  
+.bj-students-parents {
+    padding-top: 50px !important;
+    padding-bottom: 80px !important;
+    background-color: #fff7ff;
+    position: relative;
+  }
+  
+.bj-students-parents:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(https://cdn1.byjus.com/byjusweb/img/home/svg/footer_wave_bottom.svg) no-repeat;
+    background-size: 100%;
+    background-position: left bottom;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    width: 100vw;
+    height: 100%;
+    z-index: 100;
+  }
+  
+.bj-students-parents .bj-sp-content {
+    z-index: 1000;
+    position: relative;
+  }
+  
+.bj-students-parents .stats-block {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+.bj-students-parents .stats-block img {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: auto;
+    height: 30px;
+  }
+  
+.bj-students-parents .stats-block .count {
+    color: #813588;
+    font-size: 22px;
+  }
+  
+.bj-students-parents .stats-block .name {
+    font-size: 14px;
+    line-height: 15px;
+    color: #333;
+  }
+  
+.bj-students-parents .right-10 {
+    right: 10px;
+  }
+  
+.bj-students-parents .bjTmCarousel {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
+.bj-students-parents .testimonial-item {
+    text-align: center;
+  }
+  
+.bj-students-parents .testimonial-item .testimonial-img-block {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 18px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+.bj-students-parents .testimonial-item .testimonial-img-block .testimonial-img {
+    display: inline-block;
+    max-width: 136px;
+    height: 136px;
+  }
+  
+.bj-students-parents .testimonial-item .testimonial-img-block .testimonial-play-btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    max-width: 80px;
+    height: 50px;
+  }
+  
+.bj-students-parents .testimonial-item .testimonial-desc {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+.bj-students-parents .testimonial-item .testimonial-name {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #333;
+  }
+  
+.bj-students-parents .testimonial-item .testimonial-as-a {
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+  }
+  
+.bj-students-parents img {
+    vertical-align: middle;
+  }
+  
+.bj-students-parents .carousel-controles {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 44px;
+    margin-top: -25px;
+    top: 50%;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+.bj-students-parents .carousel-controles>img {
+    width: 15px;
+    height: auto;
+  }
+  
+.bj-students-parents .carousel-controles.left {
+    left: 0;
+    top: 40%;
+  }
+  
+.bj-students-parents .carousel-controles.left>img {
+    transform: rotate(-180deg);
+  }
+  
+.bj-students-parents .carousel-controles.right {
+    top: 40%;
+    right: 0;
+  }
+  
+.bj-students-parents .carousel-indicators {
+    position: relative;
+  }
+  
+.bj-students-parents .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background-color: #6236ff;
+    border-radius: 100%;
+    margin: 0 5px;
+  }
+  
+.bj-students-parents .review-btn {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+.bj-students-parents .review-btn .btn {
+    font-size: 20px;
+  }
+  
+.yt-video-player {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+.yt-video-player.show {
+    display: table !important;
+  }
+  
+.yt-video-player .modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+  }
+  
+.yt-video-player .modal-dialog .modal-content {
+    background-color: #000;
+    width: 90%;
+    margin: 30px auto;
+  }
+  
+.yt-video-player .modal-dialog .modal-content .modal-body {
+    position: relative;
+    padding-bottom: 56.2637%;
+  }
+  
+.yt-video-player .modal-dialog .modal-content .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+.yt-video-player .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1024;
+    opacity: 1;
+    padding: 10px;
+    line-height: 1;
+    font-size: 12px;
+  }
+  
+.yt-video-player .close:focus,
+.yt-video-player .close:active {
+    outline: none;
+    border: none;
+  }
+  
+.yt-video-player .close svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+  }
+  
+@media (min-width: 300px) {
+    .yt-video-player .modal-dialog .modal-content {
+      width: 90%;
+    }
+  }
+  
+@media (min-width: 768px) {
+    .bj-students-parents .stats-block {
+      margin-bottom: 90px;
+    }
+  
+    .bj-students-parents .stats-block img {
+      height: 42px;
+    }
+  
+    .bj-students-parents .stats-block .count {
+      font-size: 24px;
+    }
+  
+    .bj-students-parents .stats-block .name {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  
+@media (min-width: 992px) {
+    .bj-students-parents .stats-block .count {
+      font-size: 30px;
+      line-height: 26px;
+    }
+  
+    .bj-students-parents .stats-block .name {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  
+    .yt-video-player .modal-dialog .modal-content {
+      width: 95%;
+    }
+  }
+  
+@media (min-width: 1024px) {
+    .bj-students-parents {
+      padding-bottom: 100px !important;
+    }
+  
+    .bj-students-parents .carousel-indicators li {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .bj-students-parents .testimonial-item .testimonial-desc {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    .bj-students-parents .testimonial-item .testimonial-name {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  
+    .bj-students-parents .testimonial-item .testimonial-as-a {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  
+    .bj-students-parents .carousel-controles>img {
+      width: 30px;
+      height: auto;
+    }
+  
+    .bj-students-parents .carousel-controles.left {
+      top: 50%;
+      left: -10px;
+    }
+  
+    .bj-students-parents .carousel-controles.right {
+      top: 50%;
+      right: -10px;
+    }
+  
+    .yt-video-player .modal-dialog {
+      width: 100%;
+    }
+  
+    .yt-video-player .modal-dialog .modal-content {
+      width: 900px;
+    }
+  
+  }
+  
+  
+body {
+    font-size: 14px;
+    color: white;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    outline: none;
+  }
+  
+  .visible-xs,
+  .visible-sm {
+    display: none;
+  }
+  
+  .container {
+    height: 100%;
+  }
+  
+  .bj-btn {
+    font-size: 14px;
+    background-image: linear-gradient(to right, #5c72ff, #8c3fff);
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    outline: none;
+    min-width: 170px;
+  }
+  
+  .bj-btn:focus {
+    outline: none;
+  }
+  
+  .bj-btn .btn-arrow {
+    margin-left: 10px;
+  }
+  
+  .demo-shade {
+    background-image: linear-gradient(to right, #8c3fff, #5c72ff);
+  }
+  
+  .register-shade {
+    background-image: linear-gradient(to right, #fc6076, #ff9231);
+  }
+  
+  .explore-shade {
+    background-image: linear-gradient(to right, #0a72d1, #01b6e1);
+    margin-top: -4px;
+  }
+  
+  .review-shade {
+    background-image: linear-gradient(to right, #9752ff, #5e93ff);
+  }
+  
+  .bj-section {
+    padding: 5px 0;
+  }
+  
+  .section-header {
+    font-size: 26px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    outline: none;
+    border: none;
+  }
+  
+  @media (min-width: 300px) {
+    .visible-xs {
+      display: inline-block;
+    }
+  
+    .tb-block {
+      display: none;
+    }
+  
+    .mb-block {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .visible-sm {
+      display: inline-block;
+    }
+  
+    .tb-block {
+      display: none;
+    }
+  
+    .mb-block {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .section-header {
+      font-size: 30px;
+    }
+  
+    .tb-block {
+      display: none;
+    }
+  
+    .mb-block {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+  
+    .tb-block {
+      display: block;
+    }
+  
+    .mb-block {
+      display: none;
+    }
+  
+    .bj-btn {
+      font-size: 15px;
+    }
+  
+    .section-header {
+      font-size: 33px;
+    }
+  
+    .section-content {
+      margin-top: 30px;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .section-header {
+      font-size: 36px;
+    }
+  }
+  .carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner>.item {
+    position: relative;
+    display: none;
+    -webkit-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    line-height: 1;
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .carousel-inner>.item {
+        -webkit-transition: -webkit-transform 0.6s ease-in-out;
+        -o-transition: -o-transform 0.6s ease-in-out;
+        transition: -webkit-transform 0.6s ease-in-out;
+        transition: transform 0.6s ease-in-out;
+        transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out, -o-transform 0.6s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    .carousel-inner>.item.next,
+    .carousel-inner>.item.active.right {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        left: 0;
+    }
+
+    .carousel-inner>.item.prev,
+    .carousel-inner>.item.active.left {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        left: 0;
+    }
+
+    .carousel-inner>.item.next.left,
+    .carousel-inner>.item.prev.right,
+    .carousel-inner>.item.active {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        left: 0;
+    }
+}
+
+.carousel-inner>.active,
+.carousel-inner>.next,
+.carousel-inner>.prev {
+    display: block;
+}
+
+.carousel-inner>.active {
+    left: 0;
+}
+
+.carousel-inner>.next,
+.carousel-inner>.prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner>.next {
+    left: 100%;
+}
+
+.carousel-inner>.prev {
+    left: -100%;
+}
+
+.carousel-inner>.next.left,
+.carousel-inner>.prev.right {
+    left: 0;
+}
+
+.carousel-inner>.active.left {
+    left: -100%;
+}
+
+.carousel-inner>.active.right {
+    left: 100%;
+}
+
+
+.byjus-carousel .disney-text {
+    font-size: 14px;
+    display: block;
+}
+
+.byjus-carousel .carousel-indicators>li {
+    cursor: pointer;
+    padding: 0.6rem;
+}
+
+.byjus-carousel .item-content-block {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.byjus-carousel .item-content-block .btn {
+    margin-top: 1rem;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.byjus-carousel .disney-title-img {
+    max-height: 10rem;
+    width: 198px;
+    margin-bottom: 0.4rem;
+}
+
+.byjus-carousel .byjus-tution {
+    width: 250px;
+}
+
+.byjus-carousel .item-img-block {
+    height: 480px;
+}
+
+.item-content-block .btn {
+    width: 240px;
+}
+
+.byjus-carousel .disney-img {
+    margin: 0;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.byjus-carousel .btn-sec {
+    position: absolute;
+}
+
+@media (min-width: 991px) {
+    .byjus-carousel .item-content-block {
+        text-align: left;
+        position: relative;
+        left: 15%;
+        display: inline-block;
+    }
+    .byjus-carousel .btn-sec {
+        bottom: -5.5rem;
+        width: 95%;
+    }
+    .btla-top-banner {
+        background: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .byjus-carousel .item-content-block {
+        height: 335px;
+    }
+
+    .byjus-carousel .btn-sec {
+        bottom: 2rem;
+        width: 95%;
+    }
+}
+
+[data-toggle="popup"] {
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.popup-content {
+    margin: 30px auto;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    z-index: 1;
+    top: 10px;
+    padding: 10px 14px;
+}
+
+.popup-body {
+    position: relative;
+}
+
+.popup.vm {
+    display: table;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.popup.vm .popup-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+    .popup-content.w600 {
+        width: 600px;
+    }
+
+    .popup-content.w751 {
+        width: 751px;
+    }
+}
+
+
+.yt-video-player {
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1049;
+}
+
+.yt-video-player .popup-content {
+    background-color: #000;
+    width: 900px;
+}
+
+.yt-video-player .popup-body {
+    position: relative;
+    padding-bottom: 56.2637%;
+}
+
+.yt-video-player .popup-body iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .yt-video-player .popup-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .yt-video-player .popup-content {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) {
+    .bubble-big {
+        width: 258px;
+        height: 306px;
+        background-image: url(https://cdn1.byjus.com/home/bubble-big.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        position: absolute;
+    }
+
+    .bubble-small-h {
+        width: 40px;
+        height: 39px;
+        background-image: url(https://cdn1.byjus.com/home/bubble-small-h.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        position: absolute;
+    }
+
+    .bubble-small-v {
+        width: 38px;
+        height: 41px;
+        background-image: url(https://cdn1.byjus.com/home/bubble-small-v.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        position: absolute;
+    }
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important
+}
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}.slick-slide img{padding:0;-webkit-transition:padding .3s ease-in-out 0s;-moz-transition:padding .3s ease-in-out 0s;-o-transition:padding .3s ease-in-out 0s;-ms-transition:padding .3s ease-in-out 0s;transition:padding .3s ease-in-out 0s}.slick-slide:focus{outline:0}.slick-slide.slick-active.slick-center img{padding:0}.item-content{padding:0 20px}.slick-next,.slick-prev{font-size:0;line-height:0;position:absolute;top:50%;display:block;width:20px;height:20px;padding:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);cursor:pointer;color:transparent;border:none;outline:0;background:0 0}.slick-next:focus,.slick-next:hover,.slick-prev:focus,.slick-prev:hover{color:transparent;outline:0;background:0 0}.slick-next:focus:before,.slick-next:hover:before,.slick-prev:focus:before,.slick-prev:hover:before{opacity:1}.slick-next.slick-disabled:before,.slick-prev.slick-disabled:before{opacity:.25}.slick-next:before,.slick-prev:before{font-family:slick;font-size:20px;line-height:1;opacity:.75;color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.slick-prev{left:-25px}[dir=rtl] .slick-prev{right:-25px;left:auto}.slick-prev:before{content:'â†'}[dir=rtl] .slick-prev:before{content:'â†’'}.slick-next{right:-25px}[dir=rtl] .slick-next{right:auto;left:-25px}.slick-next:before{content:'â†’'}[dir=rtl] .slick-next:before{content:'â†'}.slick-dotted.slick-slider{margin-bottom:30px}.slick-dots{position:absolute;bottom:-25px;display:block;width:100%;padding:0;margin:0;list-style:none;text-align:center}.slick-dots li{position:relative;display:inline-block;border-radius:100%;margin:0 5px;width:15px;height:15px;margin:0 5px;padding:0;background-color:#6236ff;opacity:.6;cursor:pointer}.slick-dots li button{font-size:0;line-height:0;display:block;width:20px;height:20px;padding:5px;cursor:pointer;color:transparent;border:0;outline:0;background:0 0}.slick-dots li button:focus,.slick-dots li button:hover{outline:0}.slick-dots li button:focus:before,.slick-dots li button:hover:before{opacity:1}.slick-dots li button:before{font-family:slick;font-size:6px;line-height:20px;position:absolute;top:0;left:0;width:20px;height:20px;content:'â€¢';text-align:center;opacity:.25;color:#000;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.slick-dots li.slick-active button:before{opacity:.75;color:#000}.slick-dots li.slick-active{background-color:#6236ff;opacity:1}@media (max-width:600px){.slick-dots li button{width:10px;height:10px}.slick-dots li{width:10px;height:10px}}
